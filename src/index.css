@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+:root{
+    --bg-primary: #4B5238;
+    --bg-primary-opacity: rgba(75, 82, 56, 0.5);
+    --bg-primaty-degrade: linear-gradient(180deg, #FFFFFF 0%, #4B5238 100%);
+    --bg-secondary: #E7E7E6;
+    --bg-tertiary: #D9D9D9;
+    --text-color-primary: #8C8C8A;
+    --text-color-secondary: #E0E2DB;
+    --text-color-terciary: #008000;
+    --type-primary: "Bodoni Moda", serif;
+}
+html, body {
+    overflow-x: hidden;
+}
+.font-primary {
+    font-family: var(--type-primary);
+}
