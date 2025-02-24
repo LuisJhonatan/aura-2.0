@@ -33,46 +33,46 @@ export default function HomeSecondSection() {
   }, [width]);
 
   useEffect(() => {
-    const info: ProjectInfo[] = [
+        const info: ProjectInfo[] = [
       {
         id: 1,
-        title: "Mundo alegre en el mundo de beatriz",
+        title: "Casa en el Bosque",
         description:
-          "Creamos espacios que armonizan con el entorno natural, integrando elementos verdes y materiales sostenibles en cada diseño.",
+          "Diseñamos una casa que se integra perfectamente con el entorno natural del bosque, utilizando materiales sostenibles y tecnología avanzada.",
         type: "Arquitectura moderna",
         image: "https://www.esneca.com/wp-content/uploads/arquitectura-interior.jpg",
       },
       {
         id: 2,
-        title: "Proyecto numero 2",
+        title: "Villa Clásica",
         description:
-          "Creamos espacios que armonizan con el entorno natural, integrando elementos verdes y materiales sostenibles en cada diseño.",
+          "Una villa que refleja la elegancia y la sofisticación de la arquitectura clásica, con detalles ornamentales y espacios amplios.",
         type: "Arquitectura clásica",
-        image: "https://placehold.co/600x400",
+        image: "https://arquitecturainterioresaura.com/assets/Inicio/sobriedad.avif",
       },
       {
         id: 3,
-        title: "Proyecto tres",
+        title: "Residencia Contemporánea",
         description:
-          "Creamos espacios que armonizan con el entorno natural, integrando elementos verdes y materiales sostenibles en cada diseño.",
+          "Un proyecto contemporáneo que combina líneas limpias y espacios abiertos, creando un ambiente moderno y funcional.",
         type: "Arquitectura contemporánea",
-        image: "https://placehold.co/600x400",
+        image: "https://arquitecturainterioresaura.com/assets/Inicio/bosqueencantado.avif",
       },
       {
         id: 4,
-        title: "Proyecto numero 4",
+        title: "Apartamento Minimalista",
         description:
-          "Creamos espacios que armonizan con el entorno natural, integrando elementos verdes y materiales sostenibles en cada diseño.",
+          "Un apartamento diseñado con un enfoque minimalista, utilizando colores neutros y mobiliario funcional para maximizar el espacio.",
         type: "Arquitectura minimalista",
         image: "https://placehold.co/600x400",
       },
       {
         id: 5,
-        title: "Proyecto 5",
+        title: "Loft Industrial",
         description:
-          "Creamos espacios que armonizan con el entorno natural, integrando elementos verdes y materiales sostenibles en cada diseño.",
+          "Un loft que incorpora elementos industriales como ladrillos expuestos y tuberías visibles, creando un ambiente urbano y moderno.",
         type: "Arquitectura industrial",
-        image: "https://placehold.co/600x400",
+        image: "https://arquitecturainterioresaura.com/assets/Inicio/mundo_beatriz.avif",
       },
     ];
     setProjects(info);
