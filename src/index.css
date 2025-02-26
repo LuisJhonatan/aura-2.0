@@ -3,6 +3,7 @@
 :root{
     --bg-primary: #4B5238;
     --bg-primary-opacity: rgba(75, 82, 56, 0.5);
+    --bg-primary-opacity2: rgba(75, 82, 56, 0.75);
     --bg-primaty-degrade: linear-gradient(180deg, #FFFFFF 0%, #4B5238 100%);
     --bg-secondary: #E7E7E6;
     --bg-tertiary: #D9D9D9;

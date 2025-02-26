@@ -2,7 +2,7 @@ import { Menu } from "lucide-react";
 import { CircleX } from "lucide-react";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import logo from "../../src/assets/image/logo.png";
 import useWidth from "../hooks/useWidth";
 
@@ -10,10 +10,15 @@ export default function Header() {
   const [view, setView] = useState<boolean>(false);
   const [viewDesktop, setViewDesktop] = useState<boolean>(false);
   const { width } = useWidth();
+  const location = useLocation();
 
   useEffect(() => {
     setViewDesktop(width > 1024);
   }, [width]);
+
+  useEffect(() => {
+    setView(false);
+  }, [location])
 
   const handleClick = () => {
     setView(!view);
@@ -155,19 +160,19 @@ export default function Header() {
           >
             <Link
               to="/"
-              className="w-full p-2 bg-[var(--bg-primary)] text-white rounded-xl my-1 text-center"
+              className="w-full p-2 bg-[var(--bg-primary-opacity2)] text-white rounded-xl my-1 text-center"
             >
               Inicio
             </Link>
             <Link
               to="/nosotros"
-              className="w-full p-2 bg-[var(--bg-primary)] text-white rounded-xl my-1 text-center"
+              className="w-full p-2 bg-[var(--bg-primary-opacity2)] text-white rounded-xl my-1 text-center"
             >
               Nosotros
             </Link>
             <Link
               to="/proyectos"
-              className="w-full p-2 bg-[var(--bg-primary)] text-white rounded-xl my-1 text-center"
+              className="w-full p-2 bg-[var(--bg-primary-opacity2)] text-white rounded-xl my-1 text-center"
             >
               Proyectos
             </Link>
@@ -179,7 +184,7 @@ export default function Header() {
             </Link> */}
             <Link
               to="/contacto"
-              className="w-full p-2 bg-[var(--bg-primary)] text-white rounded-xl my-1 text-center"
+              className="w-full p-2 bg-[var(--bg-primary-opacity2)] text-white rounded-xl my-1 text-center"
             >
               Contacto
             </Link>

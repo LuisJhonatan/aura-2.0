@@ -98,7 +98,7 @@ export default function HomeSecondSection() {
   return (
     <>
       {!isDesktop ? (
-        <div className="pt-2">
+        <div className="pt-10">
           <div className={`w-full bg-[var(--bg-primary)]  m-auto py-2 `}>
             <Slider {...settings}>
               {projects.map((project) => (
@@ -139,7 +139,7 @@ export default function HomeSecondSection() {
         </div>
       ) : (
         <>
-          <div className="w-full h-[50vh] mt-16 text-[var(--bg-primary-opacity)] opacity-25 overflow-hidden font-primary">
+          <div className="w-full h-[50vh] mt-24 text-[var(--bg-primary-opacity)] opacity-25 overflow-hidden font-primary">
             <motion.span
               className="block overflow-hidden text-[50vh] leading-[50vh] whitespace-nowrap"
               style={{ width: "max-content" }}
@@ -164,7 +164,7 @@ export default function HomeSecondSection() {
             </motion.span>
           </div>
 
-          <div className="w-full absolute top-24 flex items-center justify-center z-40">
+          <div className="w-full absolute top-28 flex items-center justify-center z-40">
             <div className={`w-[50%] bg-[var(--bg-primary)]  m-auto py-2 `}>
               <Slider {...settings}>
                 {projects.map((project) => (
@@ -180,7 +180,7 @@ export default function HomeSecondSection() {
             </div>
           </div>
 
-          <div className="w-[600px] mx-auto my-8  flex flex-col items-center">
+          <div className="w-3xl mx-auto my-8  flex flex-col items-center">
             <div className="">
               <p className="text-[var(--text-color-terciary)] text-xl py-4">
                 {" "}
