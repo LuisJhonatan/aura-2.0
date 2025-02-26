@@ -127,14 +127,20 @@ export default function About() {
         <div className="max-w-7xl mx-auto p-4 lg:p-0">
           <div className="w-full md:w-[75vw] lg:w-[60vw] xl:w-[40vw] bg-white/50 flex mx-auto rounded-xl">
             <div className="flex flex-col item-center justify-around lg:justify-center lg:gap-4 w-1/2 px-4 py-2">
-              <h3 className="font-bold md:text-2xl lg:text-3xl text-center">Misión</h3>
+              <h3 className="font-bold md:text-2xl lg:text-3xl text-center">
+                Misión
+              </h3>
               <p className="text-xs md:text-lg ">
                 Nuestra meta es transformar espacios a su mejor versión posible,
                 considerando las necesidades y gustos de cada cliente.
               </p>
             </div>
-            <div className="w-1/2 lg:h-96 ">
-              <img className="object-cover w-full h-full rounded-r-xl" src={vision} alt="" />
+            <div className="w-1/2 lg:h-80 ">
+              <img
+                className="object-cover w-full h-full rounded-r-xl"
+                src={vision}
+                alt=""
+              />
             </div>
           </div>
 
@@ -142,14 +148,17 @@ export default function About() {
             <div className="flex flex-col item-center justify-around lg:justify-center lg:gap-4 w-1/2 px-4 py-2">
               <h3 className="font-bold md:text-2xl  text-center">Visión</h3>
               <p className="text-xs md:text-lg ">
-                Buscamos sobrepasar las expectativas de los clientes al dar una
-                atención personalizada, creando una relación duradera con cada
-                uno de los clientes, basada en el entendimiento y amor por el
-                diseño.
+                Nos esforzamos por ofrecer un servicio personalizado que refleje
+                el estilo y necesidades de cada cliente, creando conexiones
+                basadas en la confianza y la pasión por el diseño.
               </p>
             </div>
-            <div className="w-1/2 lg:h-96 ">
-              <img className="object-cover w-full h-full rounded-r-xl" src={mision} alt="" />
+            <div className="w-1/2 lg:h-80 ">
+              <img
+                className="object-cover w-full h-full rounded-r-xl"
+                src={mision}
+                alt=""
+              />
             </div>
           </div>
         </div>
