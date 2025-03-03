@@ -1,87 +1,62 @@
-import firstImage from "../../../assets/image/first_image.png";
 import { Link } from "react-router-dom";
-import { ChevronRight } from "lucide-react";
-import useWidth from "../../../hooks/useWidth";
-import { useEffect, useState } from "react";
+import fondo from "../../../assets/image/fondo-1.jpg";
+import { ChevronsRight, PhoneOutgoing } from "lucide-react";
 
 export default function HomeFirstSection() {
-  const [isDesktop, setIsDesktop] = useState<boolean>(false);
-  const { width } = useWidth();
-
-  useEffect(() => {
-    if (width > 1024) {
-      setIsDesktop(true);
-      console.log("Desktop");
-    } else {
-      setIsDesktop(false);
-    }
-  }, [width]);
-
   return (
-    <>
-      {!isDesktop ? (
-        <div className="max-w-[1200px] relative flex flex-col gap-y-4 items-center pt-16">
-          <div className="w-[70%] h-auto flex items-center justify-center ">
-            <img
-              className=" inline-block object-cover"
-              src={firstImage}
-              alt="Imagen de espacio arquitectonico"
-            />
-          </div>
-          <main className="px-4">
-            <h1 className="text-[20px] md:text-3xl relative z-30 px-4">
+    <div
+      className="w-full min-h-screen"
+      style={{
+        background: `linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.25) 100%), url(${fondo})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
+      <main className="w-full text-white relative pt-[25vh] pb-16">
+        <div className="bg-[var(--bg-primary-opacity)]">
+          <div className="max-w-7xl px-4 mx-auto">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl  xl:text-6xl 2xl:text-7xl">
               Arquitectura interiores <b>AURA</b>
             </h1>
-            <div className="text-[28px] md:text-4xl font-bold px-4">
+            <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl py-4">
               <h3 className="relative md:left-[5%]">"Diseñamos</h3>
               <h3 className="relative left-[15%]">espacios,</h3>
               <h3 className="relative left-[25%]">creamos</h3>
               <h3 className="relative left-[35%]">emociones"</h3>
             </div>
-            <p className="relative z-30 px-4 md:p-4 md:text-[20px] text-center text-[var(--text-color-secondary)] ">
-              En Aura, convertimos cada espacio en una experiencia única,
-              fusionando creatividad, funcionalidad y confort.
-            </p>
-            <div className="flex items-center justify-around text-center py-4 md:text-xl">
-              <div className="flex items-center justify-center w-[40%] py-3 bg-[var(--bg-secondary)] rounded-xl">
-                <Link to="/proyectos">Ver proyectos</Link>
-                <ChevronRight />
-              </div>
-              <div className="w-[40%] py-3 bg-[var(--bg-primary)] text-white rounded-xl">
-                <Link to="/contactanos">Contactanos</Link>
-              </div>
-            </div>
-          </main>
+          </div>
         </div>
-      ) : (
-        <>
-          <div className="w-full h-[25vh] bg-[var(--bg-primary-opacity)] absolute top-32"></div>
-          <main className="max-w-[1200px] flex  mx-auto">
-            <div>
-              <h1 className="text-4xl text-[var(--text-color-secondary)] ">
-                Arquitectura interiores <b>AURA</b>
-              </h1>
-              <div className="text-7xl">
-                <h3 className="relative">"Diseñamos</h3>
-                <h3 className="relative left-[10%]">espacios,</h3>
-                <h3 className="relative left-[20%]">creamos</h3>
-                <h3 className="relative left-[30%]">emociones"</h3>
-              </div>
-              <p className="text-2xl text-[var(--text-color-secondary)] ">
-                En Aura, convertimos cada espacio en una experiencia única,
-                fusionando creatividad, funcionalidad y confort.
-              </p>
-            </div>
-            <div className="w-[80%] h-full  relative -top-[5vh]">
-              <img
-                className="w-full h-full object-cover "
-                src={firstImage}
-                alt="Imagen de espacio arquitectonico"
-              />
-            </div>
-          </main>
-        </>
-      )}
-    </>
+
+        <div className="max-w-7xl px-4 mx-auto">
+          <p className="text-center text-lg sm:text-xl md:text-2xl lg:text-3xl py-4">
+            En Aura, convertimos cada espacio en una experiencia única,
+            fusionando creatividad, funcionalidad y confort.
+          </p>
+        </div>
+
+        <div className="max-w-7xl mx-auto grid grid-cols-2 gap-8 px-4 py-8 xl:py-2">
+          <div className="text-lg md:text-2xl flex items-center justify-center">
+            <Link
+              className="flex items-center justify-center gap-4 p-4 border-2 rounded-2xl"
+              to="/proyectos"
+            >
+              <span>Proyectos</span>
+              <ChevronsRight />
+            </Link>
+          </div>
+
+          <div className="text-lg md:text-2xl flex items-center justify-center">
+            <Link
+              className="flex items-center justify-center gap-4 p-4 border-[var(--bg-primary-opacity2)] border-2 bg-[var(--bg-primary-opacity2)] rounded-2xl"
+              to="/contacto"
+            >
+              <span>Contáctanos</span>
+              <PhoneOutgoing />
+            </Link>
+          </div>
+        </div>
+      </main>
+    </div>
   );
 }

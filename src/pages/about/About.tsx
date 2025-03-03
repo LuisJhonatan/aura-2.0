@@ -8,12 +8,12 @@ import vision from "../../assets/image/vision.jpg";
 
 export default function About() {
   const [hoveredUser, setHoveredUser] = useState<string | null>(null);
-
+  
   return (
     <section
       className="min-h-screen py-24"
       style={{
-        background: `linear-gradient(180deg, rgba(255, 255, 255, 0.75) 0%, rgba(75, 82, 56, 0.75) 100%), url(${background})`,
+        background: `linear-gradient(180deg, rgba(75, 82, 56, 0.5) 0%, rgba(75, 82, 56, 0.5) 100%), url(${background})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
